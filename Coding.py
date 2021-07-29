@@ -33,7 +33,7 @@ def check_name(player1_entry, player2_entry):
 		player_name[1] = player2_entry.get()
 		print(player1_entry.get())
 		print(player2_entry.get())
-		#reset()
+		reset()
 
 def page1():
 	Label(frame1, text = "Tic-Tac-Toe", font = ("times new roman ", 12, "bold"), bg = "Cadet Blue").grid(row = 0, column = 0, columnspan = 2, pady = (70,50))
