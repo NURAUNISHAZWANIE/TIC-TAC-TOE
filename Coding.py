@@ -45,7 +45,60 @@ def page1():
 	player2_entry = Entry(frame1)
 	player2_entry.grid(row = 5, column = 1)
 
-
+clicked = True
+count = 0
+# disable all the buttons
+def disable_all_buttons():
+	b1.config(state=DISABLED)
+	b2.config(state=DISABLED)
+	b3.config(state=DISABLED)
+	b4.config(state=DISABLED)
+	b5.config(state=DISABLED)
+	b6.config(state=DISABLED)
+	b7.config(state=DISABLED)
+	b8.config(state=DISABLED)
+	b9.config(state=DISABLED)
+# Check to see if someone won
+def checkifwon():
+	global winner, player_name, player1_score
+	winner = False
+	if b1["text"] == "X" and b2["text"] == "X" and b3["text"]  == "X":
+		b1.config(bg="Blue")
+		b2.config(bg="Blue")
+		b3.config(bg="Blue")
+		winner = True
+		messagebox.showinfo("Tic Tac Toe", f"CONGRATULATIONS!  {player_name[0]} Wins!!")
+		player_score[0] += 1
+		player1_score['text'] = f'{player_score[0]}'
+		disable_all_buttons()
+	elif b4["text"] == "X" and b5["text"] == "X" and b6["text"]  == "X":
+		b4.config(bg="Blue")
+		b5.config(bg="Blue")
+		b6.config(bg="Blue")
+		winner = True
+		messagebox.showinfo("Tic Tac Toe", f"CONGRATULATIONS!  {player_name[0]} Wins!!")
+		player_score[0] += 1
+		player1_score['text'] = f'{player_score[0]}'
+		disable_all_buttons()
+	elif b7["text"] == "X" and b8["text"] == "X" and b9["text"]  == "X":
+		b7.config(bg="Blue")
+		b8.config(bg="Blue")
+		b9.config(bg="Blue")
+		winner = True
+		messagebox.showinfo("Tic Tac Toe", f"CONGRATULATIONS!  {player_name[0]} Wins!!")
+		player_score[0] += 1
+		player1_score['text'] = f'{player_score[0]}'
+		disable_all_buttons()
+	elif b1["text"] == "X" and b4["text"] == "X" and b7["text"]  == "X":
+		b1.config(bg="Blue")
+		b4.config(bg="Blue")
+		b7.config(bg="Blue")
+		winner = True
+		messagebox.showinfo("Tic Tac Toe", f"CONGRATULATIONS!  {player_name[0]} Wins!!")
+		player_score[0] += 1
+		player1_score['text'] = f'{player_score[0]}'
+		disable_all_buttons()
+	
 #Define Reset
 def reset():
 	global b1, b2, b3, b4, b5, b6, b7, b8, b9, frame1, app, player1_score, player2_score
