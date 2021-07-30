@@ -56,5 +56,7 @@ my_menu.add_cascade(label="Options", menu=options_menu)
 
 options_menu.add_command(label="Reset Game", command=reset)
 
+
+
 page1()
 app.mainloop()
