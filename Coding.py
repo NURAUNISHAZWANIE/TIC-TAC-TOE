@@ -104,12 +104,48 @@ def reset():
 	global b1, b2, b3, b4, b5, b6, b7, b8, b9, frame1, app, player1_score, player2_score
 	global clicked, count, create_option
 	if create_option == 0:
+		my_menu.add_cascade(label="Options", menu=options_menu)
+		options_menu.add_command(label="Reset Game", command=reset)
+		options_menu.add_command(label="New Game", command=newGame)
 
-my_menu.add_cascade(label="Options", menu=options_menu)
+	create_option += 1
+	frame1.destroy()
+	score_frame = Label(frame2)
+	score_frame.grid(row = 0, column = 3, rowspan = 3)
+	clicked = True
+	count = 0
+	# Build our buttons
+	b1 = Button(frame2, text=" ", font=("Arial Rounded MT Bold", 20), height=3, width=6, bg="SystemButtonFace", command=lambda: b_click(b1))
+	b2 = Button(frame2, text=" ", font=("Arial Rounded MT Bold", 20), height=3, width=6, bg="SystemButtonFace", command=lambda: b_click(b2))
+	b3 = Button(frame2, text=" ", font=("Arial Rounded MT Bold", 20), height=3, width=6, bg="SystemButtonFace", command=lambda: b_click(b3))
+	b4 = Button(frame2, text=" ", font=("Arial Rounded MT Bold", 20), height=3, width=6, bg="SystemButtonFace", command=lambda: b_click(b4))
+	b5 = Button(frame2, text=" ", font=("Arial Rounded MT Bold", 20), height=3, width=6, bg="SystemButtonFace", command=lambda: b_click(b5))
+	b6 = Button(frame2, text=" ", font=("Arial Rounded MT Bold", 20), height=3, width=6, bg="SystemButtonFace", command=lambda: b_click(b6))
+	b7 = Button(frame2, text=" ", font=("Arial Rounded MT Bold", 20), height=3, width=6, bg="SystemButtonFace", command=lambda: b_click(b7))
+	b8 = Button(frame2, text=" ", font=("Arial Rounded MT Bold", 20), height=3, width=6, bg="SystemButtonFace", command=lambda: b_click(b8))
+	b9 = Button(frame2, text=" ", font=("Arial Rounded MT Bold", 20), height=3, width=6, bg="SystemButtonFace", command=lambda: b_click(b9))
 
-options_menu.add_command(label="Reset Game", command=reset)
-
-
+	# Grid our buttons to the screen
+	b1.grid(row=0, column=0)
+	b2.grid(row=0, column=1)
+	b3.grid(row=0, column=2)
+	b4.grid(row=1, column=0)
+	b5.grid(row=1, column=1)
+	b6.grid(row=1, column=2)
+	b7.grid(row=2, column=0)
+	b8.grid(row=2, column=1)
+	b9.grid(row=2, column=2)
+	
+	score_label = Label(score_frame, text = 'score', width = 20)
+	score_label.grid(row=0, column=0)
+	player1 = Label(score_frame, text = f'Player X ({player_name[0]}):')
+	player1.grid(row = 1, column = 0)
+	player1_score = Label(score_frame, text = f'{player_score[0]}')
+	player1_score.grid(row = 1, column = 1)
+	player2 = Label(score_frame, text = f'Player O ({player_name[1]}):')
+	player2.grid(row = 2, column = 0)
+	player2_score = Label(score_frame, text = f'{player_score[1]}')
+	player2_score.grid(row = 2, column = 1)
 
 page1()
 app.mainloop()
