@@ -147,5 +147,20 @@ def reset():
 	player2_score = Label(score_frame, text = f'{player_score[1]}')
 	player2_score.grid(row = 2, column = 1)
 
+#Function for New Game
+def newGame():
+	
+	global player_score
+	player_score[0]=0
+	player_score[1]=0
+	reset()
+	
+# Create menu
+my_menu = Menu(app)
+app.config(menu=my_menu)
+Label(frame1, text ="Player 1").grid(row=4, column=0)
+# Create Options Menu
+options_menu = Menu(my_menu, tearoff=False)
+
 page1()
 app.mainloop()
