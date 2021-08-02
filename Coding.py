@@ -98,6 +98,42 @@ def checkifwon():
 		player_score[0] += 1
 		player1_score['text'] = f'{player_score[0]}'
 		disable_all_buttons()
+	elif b2["text"] == "X" and b5["text"] == "X" and b8["text"]  == "X":
+		b2.config(bg="Blue")
+		b5.config(bg="Blue")
+		b8.config(bg="Blue")
+		winner = True
+		messagebox.showinfo("Tic Tac Toe", f"CONGRATULATIONS!  {player_name[0]} Wins!!")
+		player_score[0] += 1
+		player1_score['text'] = f'{player_score[0]}'
+		disable_all_buttons()
+	elif b3["text"] == "X" and b6["text"] == "X" and b9["text"]  == "X":
+		b3.config(bg="Blue")
+		b6.config(bg="Blue")
+		b9.config(bg="Blue")
+		winner = True
+		messagebox.showinfo("Tic Tac Toe", f"CONGRATULATIONS!  {player_name[0]} Wins!!")
+		player_score[0] += 1
+		player1_score['text'] = f'{player_score[0]}'
+		disable_all_buttons()
+	elif b1["text"] == "X" and b5["text"] == "X" and b9["text"]  == "X":
+		b1.config(bg="Blue")
+		b5.config(bg="Blue")
+		b9.config(bg="Blue")
+		winner = True
+		messagebox.showinfo("Tic Tac Toe", f"CONGRATULATIONS!  {player_name[0]} Wins!!")
+		player_score[0] += 1
+		player1_score['text'] = f'{player_score[0]}'
+		disable_all_buttons()
+	elif b3["text"] == "X" and b5["text"] == "X" and b7["text"]  == "X":
+		b3.config(bg="Blue")
+		b5.config(bg="Blue")
+		b7.config(bg="Blue")
+		winner = True
+		messagebox.showinfo("Tic Tac Toe", f"CONGRATULATIONS!  {player_name[0]} Wins!!")
+		player_score[0] += 1
+		player1_score['text'] = f'{player_score[0]}'
+		disable_all_buttons()
 	
 #Define Reset
 def reset():
