@@ -98,7 +98,105 @@ def checkifwon():
 		player_score[0] += 1
 		player1_score['text'] = f'{player_score[0]}'
 		disable_all_buttons()
-	
+
+
+#### CHECK FOR O's Win
+	elif b1["text"] == "O" and b2["text"] == "O" and b3["text"]  == "O":
+		b1.config(bg="Red")
+		b2.config(bg="Red")
+		b3.config(bg="Red")
+		winner = True
+		messagebox.showinfo("Tic Tac Toe", f"CONGRATULATIONS!  {player_name[1]} Wins!!")
+		player_score[1] += 1
+		player2_score['text'] = f'{player_score[1]}'
+		disable_all_buttons()
+	elif b4["text"] == "O" and b5["text"] == "O" and b6["text"]  == "O":
+		b4.config(bg="Red")
+		b5.config(bg="Red")
+		b6.config(bg="Red")
+		winner = True
+		messagebox.showinfo("Tic Tac Toe", f"CONGRATULATIONS!  {player_name[1]} Wins!!")
+		player_score[1] += 1
+		player2_score['text'] = f'{player_score[1]}'
+		disable_all_buttons()
+	elif b7["text"] == "O" and b8["text"] == "O" and b9["text"]  == "O":
+		b7.config(bg="Red")
+		b8.config(bg="Red")
+		b9.config(bg="Red")
+		winner = True
+		messagebox.showinfo("Tic Tac Toe", f"CONGRATULATIONS!  {player_name[1]} Wins!!")
+		player_score[1] += 1
+		player2_score['text'] = f'{player_score[1]}'
+		disable_all_buttons()
+	elif b1["text"] == "O" and b4["text"] == "O" and b7["text"]  == "O":
+		b1.config(bg="Red")
+		b4.config(bg="Red")
+		b7.config(bg="Red")
+		winner = True
+		messagebox.showinfo("Tic Tac Toe", f"CONGRATULATIONS!  {player_name[1]} Wins!!")
+		player_score[1] += 1
+		player2_score['text'] = f'{player_score[1]}'
+		disable_all_buttons()
+	elif b2["text"] == "O" and b5["text"] == "O" and b8["text"]  == "O":
+		b2.config(bg="Red")
+		b5.config(bg="Red")
+		b8.config(bg="Red")
+		winner = True
+		messagebox.showinfo("Tic Tac Toe", f"CONGRATULATIONS!  {player_name[1]} Wins!!")
+		player_score[1] += 1
+		player2_score['text'] = f'{player_score[1]}'
+		disable_all_buttons()
+	elif b3["text"] == "O" and b6["text"] == "O" and b9["text"]  == "O":
+		b3.config(bg="Red")
+		b6.config(bg="Red")
+		b9.config(bg="Red")
+		winner = True
+		messagebox.showinfo("Tic Tac Toe", f"CONGRATULATIONS!  {player_name[1]} Wins!!")
+		player_score[1] += 1
+		player2_score['text'] = f'{player_score[1]}'
+		disable_all_buttons()
+	elif b1["text"] == "O" and b5["text"] == "O" and b9["text"]  == "O":
+		b1.config(bg="Red")
+		b5.config(bg="Red")
+		b9.config(bg="Red")
+		winner = True
+		messagebox.showinfo("Tic Tac Toe", f"CONGRATULATIONS!  {player_name[1]} Wins!!")
+		player_score[1] += 1
+		player2_score['text'] = f'{player_score[1]}'
+		disable_all_buttons()
+	elif b3["text"] == "O" and b5["text"] == "O" and b7["text"]  == "O":
+		b3.config(bg="Red")
+		b5.config(bg="Red")
+		b7.config(bg="Red")
+		winner = True
+		messagebox.showinfo("Tic Tac Toe", f"CONGRATULATIONS!  {player_name[1]} Wins!!")
+		player_score[1] += 1
+		player2_score['text'] = f'{player_score[1]}'
+		disable_all_buttons()
+
+	# Check if tie
+	if count == 9 and winner == False:
+		messagebox.showinfo("Tic Tac Toe", "It's A Tie!\n No One Wins!")
+		disable_all_buttons()
+
+# Button clicked function
+def b_click(b):
+	global clicked, count
+	if b["text"] == " " and clicked == True:
+		b["text"] = "X"
+		clicked = False
+		count += 1
+		checkifwon()
+	elif b["text"] == " " and clicked == False:
+		b["text"] = "O"
+		clicked = True
+		count += 1
+		checkifwon()
+	else:
+		messagebox.showerror("Tic Tac Toe", "Hey! That box has already been selected\nPick Another Box..." )
+
+
+
 #Define Reset
 def reset():
 	global b1, b2, b3, b4, b5, b6, b7, b8, b9, frame1, app, player1_score, player2_score
