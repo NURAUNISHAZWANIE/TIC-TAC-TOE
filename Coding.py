@@ -98,7 +98,6 @@ def checkifwon():
 		player_score[0] += 1
 		player1_score['text'] = f'{player_score[0]}'
 		disable_all_buttons()
-<<<<<<< HEAD
 	elif b2["text"] == "X" and b5["text"] == "X" and b8["text"]  == "X":
 		b2.config(bg="Blue")
 		b5.config(bg="Blue")
@@ -135,10 +134,7 @@ def checkifwon():
 		player_score[0] += 1
 		player1_score['text'] = f'{player_score[0]}'
 		disable_all_buttons()
-	
 =======
-
-
 #### CHECK FOR O's Win
 	elif b1["text"] == "O" and b2["text"] == "O" and b3["text"]  == "O":
 		b1.config(bg="Red")
@@ -236,7 +232,6 @@ def b_click(b):
 
 
 
->>>>>>> f4388357ef50f4ee7dc1c3578a75c8e599d1cdce
 #Define Reset
 def reset():
 	global b1, b2, b3, b4, b5, b6, b7, b8, b9, frame1, app, player1_score, player2_score
