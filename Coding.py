@@ -4,6 +4,7 @@ from tkinter import messagebox
 
 app = Tk()
 app.title('Tic-Tac-Toe')
+app.iconbitmap('C:/Users/aunis/Desktop/TIC TAC TOE/tic tac toe.ico')
 #app.iconbitmap('C:/Users/USER/Desktop/MiniProject/tic tac toe.ico')
 
 
