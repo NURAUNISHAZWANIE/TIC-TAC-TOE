@@ -1,11 +1,11 @@
 from tkinter import *
 from tkinter import messagebox
-from PIL import ImageTk,Image
+#from PIL import ImageTk,Image
 
 
 app = Tk()
 app.title('Tic-Tac-Toe')
-#app.iconbitmap('C:/Users/USER/Desktop/MiniProject/tic tac toe.ico')
+app.iconbitmap('C:/Users/aunis/Desktop/TIC TAC TOE/tic tac toe.ico')
 
 
 frame1 = Label(app, bd = 2, relief = SUNKEN)
@@ -24,7 +24,7 @@ winPos = 0
 player1_score = None
 player2_score = None
 
-my_img = Image.open("C:/Users/Asus/Desktop/HAIQAL/winner.png")
+my_img = Image.open("C:/Users/aunis/Desktop/TIC TAC TOE/winner.png")
 my_img = my_img.resize((185,185), Image.ANTIALIAS)
 my_img = ImageTk.PhotoImage(my_img)
 
