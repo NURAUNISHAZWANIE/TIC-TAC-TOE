@@ -2,11 +2,11 @@ from tkinter import *
 from tkinter import messagebox
 #from PIL import ImageTk,Image
 
-
 app = Tk()
 app.title('Tic-Tac-Toe')
-app.iconbitmap('C:/Users/aunis/Desktop/TIC TAC TOE/tic tac toe.ico')
-
+#app.iconbitmap('C:/Users/aunis/Desktop/TIC TAC TOE/tic tac toe.ico')
+app.iconbitmap('C:/Users/USER/Desktop/MiniProject/tic tac toe.ico')
+#app.iconbitmap('C:/Users/Asus/Desktop/HAIQAL/tic tac toe.ico')
 
 frame1 = Label(app, bd = 2, relief = SUNKEN)
 frame1.pack(side = "top", fill = BOTH, expand = 1)
@@ -28,6 +28,7 @@ my_img = Image.open("C:/Users/aunis/Desktop/TIC TAC TOE/winner.png")
 my_img = my_img.resize((185,185), Image.ANTIALIAS)
 my_img = ImageTk.PhotoImage(my_img)
 
+#Function splashcreen(popup image if any player win the set)
 def winnerPic(winPos):
     window = Toplevel(app)
 
@@ -35,9 +36,9 @@ def winnerPic(winPos):
 
     def msgbox(player_name):
         if winPos == 1:
-            messagebox.showinfo("Tic Tac Toe", f"CONGRATULATIONS!  {player_name[0]} Wins!!")
+            messagebox.showinfo("Tic Tac Toe", f"CONGRATULATIONS! {player_name[0]} Wins!!")
         elif winPos ==2:
-            messagebox.showinfo("Tic Tac Toe", f"CONGRATULATIONS!  {player_name[1]} Wins!!")
+            messagebox.showinfo("Tic Tac Toe", f"CONGRATULATIONS! {player_name[1]} Wins!!")
 
     def destroy():
         window.destroy()
@@ -81,161 +82,161 @@ def disable_all_buttons():
 
 # Check to see if someone won
 def checkifwon():
- global winner, player_name, player1_score, winPos
- winner = False
- if b1["text"] == "X" and b2["text"] == "X" and b3["text"]  == "X":
-  b1.config(bg="Blue")
-  b2.config(bg="Blue")
-  b3.config(bg="Blue")
-  winner = True
-  winPos = 1
-  player_score[0] += 1
-  player1_score['text'] = f'{player_score[0]}'
-  disable_all_buttons()
- elif b4["text"] == "X" and b5["text"] == "X" and b6["text"]  == "X":
-  b4.config(bg="Blue")
-  b5.config(bg="Blue")
-  b6.config(bg="Blue")
-  winner = True
-  winPos = 1
-  player_score[0] += 1
-  player1_score['text'] = f'{player_score[0]}'
-  disable_all_buttons()
- elif b7["text"] == "X" and b8["text"] == "X" and b9["text"]  == "X":
-  b7.config(bg="Blue")
-  b8.config(bg="Blue")
-  b9.config(bg="Blue")
-  winner = True
-  winPos = 1
-  player_score[0] += 1
-  player1_score['text'] = f'{player_score[0]}'
-  disable_all_buttons()
- elif b1["text"] == "X" and b4["text"] == "X" and b7["text"]  == "X":
-  b1.config(bg="Blue")
-  b4.config(bg="Blue")
-  b7.config(bg="Blue")
-  winner = True
-  winPos = 1
-  player_score[0] += 1
-  player1_score['text'] = f'{player_score[0]}'
-  disable_all_buttons()
- elif b2["text"] == "X" and b5["text"] == "X" and b8["text"]  == "X":
-  b2.config(bg="Blue")
-  b5.config(bg="Blue")
-  b8.config(bg="Blue")
-  winner = True
-  winPos = 1
-  player_score[0] += 1
-  player1_score['text'] = f'{player_score[0]}'
-  disable_all_buttons()
- elif b3["text"] == "X" and b6["text"] == "X" and b9["text"]  == "X":
-  b3.config(bg="Blue")
-  b6.config(bg="Blue")
-  b9.config(bg="Blue")
-  winner = True
-  winPos = 1
-  player_score[0] += 1
-  player1_score['text'] = f'{player_score[0]}'
-  disable_all_buttons()
- elif b1["text"] == "X" and b5["text"] == "X" and b9["text"]  == "X":
-  b1.config(bg="Blue")
-  b5.config(bg="Blue")
-  b9.config(bg="Blue")
-  winner = True
-  winPos = 1
-  player_score[0] += 1
-  player1_score['text'] = f'{player_score[0]}'
-  disable_all_buttons()
- elif b3["text"] == "X" and b5["text"] == "X" and b7["text"]  == "X":
-  b3.config(bg="Blue")
-  b5.config(bg="Blue")
-  b7.config(bg="Blue")
-  winner = True
-  winPos = 1
-  player_score[0] += 1
-  player1_score['text'] = f'{player_score[0]}'
-  disable_all_buttons()
+	global winner, player_name, player1_score, winPos
+	winner = False
+	if b1["text"] == "X" and b2["text"] == "X" and b3["text"]  == "X":
+		b1.config(bg="Blue")
+		b2.config(bg="Blue")
+		b3.config(bg="Blue")
+		winner = True
+		winPos = 1
+		player_score[0] += 1
+		player1_score['text'] = f'{player_score[0]}'
+		disable_all_buttons()
+	elif b4["text"] == "X" and b5["text"] == "X" and b6["text"]  == "X":
+		b4.config(bg="Blue")
+		b5.config(bg="Blue")
+		b6.config(bg="Blue")
+		winner = True
+		winPos = 1
+		player_score[0] += 1
+		player1_score['text'] = f'{player_score[0]}'
+		disable_all_buttons()
+	elif b7["text"] == "X" and b8["text"] == "X" and b9["text"]  == "X":
+		b7.config(bg="Blue")
+		b8.config(bg="Blue")
+		b9.config(bg="Blue")
+		winner = True
+		winPos = 1
+		player_score[0] += 1
+		player1_score['text'] = f'{player_score[0]}'
+		disable_all_buttons()
+	elif b1["text"] == "X" and b4["text"] == "X" and b7["text"]  == "X":
+		b1.config(bg="Blue")
+		b4.config(bg="Blue")
+		b7.config(bg="Blue")
+		winner = True
+		winPos = 1
+		player_score[0] += 1
+		player1_score['text'] = f'{player_score[0]}'
+		disable_all_buttons()
+	elif b2["text"] == "X" and b5["text"] == "X" and b8["text"]  == "X":
+		b2.config(bg="Blue")
+		b5.config(bg="Blue")
+		b8.config(bg="Blue")
+		winner = True
+		winPos = 1
+		player_score[0] += 1
+		player1_score['text'] = f'{player_score[0]}'
+		disable_all_buttons()
+	elif b3["text"] == "X" and b6["text"] == "X" and b9["text"]  == "X":
+		b3.config(bg="Blue")
+		b6.config(bg="Blue")
+		b9.config(bg="Blue")
+		winner = True
+		winPos = 1
+		player_score[0] += 1
+		player1_score['text'] = f'{player_score[0]}'
+		disable_all_buttons()
+	elif b1["text"] == "X" and b5["text"] == "X" and b9["text"]  == "X":
+		b1.config(bg="Blue")
+		b5.config(bg="Blue")
+		b9.config(bg="Blue")
+		winner = True
+		winPos = 1
+		player_score[0] += 1
+		player1_score['text'] = f'{player_score[0]}'
+		disable_all_buttons()
+	elif b3["text"] == "X" and b5["text"] == "X" and b7["text"]  == "X":
+		b3.config(bg="Blue")
+		b5.config(bg="Blue")
+		b7.config(bg="Blue")
+		winner = True
+		winPos = 1
+		player_score[0] += 1
+		player1_score['text'] = f'{player_score[0]}'
+		disable_all_buttons()
 
-#### CHECK FOR O's Win
- elif b1["text"] == "O" and b2["text"] == "O" and b3["text"]  == "O":
-  b1.config(bg="Red")
-  b2.config(bg="Red")
-  b3.config(bg="Red")
-  winner = True
-  winPos = 2
-  player_score[1] += 1
-  player2_score['text'] = f'{player_score[1]}'
-  disable_all_buttons()
- elif b4["text"] == "O" and b5["text"] == "O" and b6["text"]  == "O":
-  b4.config(bg="Red")
-  b5.config(bg="Red")
-  b6.config(bg="Red")
-  winner = True
-  winPos = 2
-  player_score[1] += 1
-  player2_score['text'] = f'{player_score[1]}'
-  disable_all_buttons()
- elif b7["text"] == "O" and b8["text"] == "O" and b9["text"]  == "O":
-  b7.config(bg="Red")
-  b8.config(bg="Red")
-  b9.config(bg="Red")
-  winner = True
-  winPos = 2
-  player_score[1] += 1
-  player2_score['text'] = f'{player_score[1]}'
-  disable_all_buttons()
- elif b1["text"] == "O" and b4["text"] == "O" and b7["text"]  == "O":
-  b1.config(bg="Red")
-  b4.config(bg="Red")
-  b7.config(bg="Red")
-  winner = True
-  winPos = 2
-  player_score[1] += 1
-  player2_score['text'] = f'{player_score[1]}'
-  disable_all_buttons()
- elif b2["text"] == "O" and b5["text"] == "O" and b8["text"]  == "O":
-  b2.config(bg="Red")
-  b5.config(bg="Red")
-  b8.config(bg="Red")
-  winner = True
-  winPos = 2
-  player_score[1] += 1
-  player2_score['text'] = f'{player_score[1]}'
-  disable_all_buttons()
- elif b3["text"] == "O" and b6["text"] == "O" and b9["text"]  == "O":
-  b3.config(bg="Red")
-  b6.config(bg="Red")
-  b9.config(bg="Red")
-  winner = True
-  winPos = 2
-  player_score[1] += 1
-  player2_score['text'] = f'{player_score[1]}'
-  disable_all_buttons()
- elif b1["text"] == "O" and b5["text"] == "O" and b9["text"]  == "O":
-  b1.config(bg="Red")
-  b5.config(bg="Red")
-  b9.config(bg="Red")
-  winner = True
-  winPos = 2
-  player_score[1] += 1
-  player2_score['text'] = f'{player_score[1]}'
-  disable_all_buttons()
- elif b3["text"] == "O" and b5["text"] == "O" and b7["text"]  == "O":
-  b3.config(bg="Red")
-  b5.config(bg="Red")
-  b7.config(bg="Red")
-  winner = True
-  winPos = 2
-  player_score[1] += 1
-  player2_score['text'] = f'{player_score[1]}'
-  disable_all_buttons()
+	# CHECK FOR O's Win
+	elif b1["text"] == "O" and b2["text"] == "O" and b3["text"]  == "O":
+		b1.config(bg="Red")
+		b2.config(bg="Red")
+		b3.config(bg="Red")
+		winner = True
+		winPos = 2
+		player_score[1] += 1
+		player2_score['text'] = f'{player_score[1]}'
+		disable_all_buttons()
+	elif b4["text"] == "O" and b5["text"] == "O" and b6["text"]  == "O":
+		b4.config(bg="Red")
+		b5.config(bg="Red")
+		b6.config(bg="Red")
+		winner = True
+		winPos = 2
+		player_score[1] += 1
+		player2_score['text'] = f'{player_score[1]}'
+		disable_all_buttons()
+	elif b7["text"] == "O" and b8["text"] == "O" and b9["text"]  == "O":
+		b7.config(bg="Red")
+		b8.config(bg="Red")
+		b9.config(bg="Red")
+		winner = True
+		winPos = 2
+		player_score[1] += 1
+		player2_score['text'] = f'{player_score[1]}'
+		disable_all_buttons()
+	elif b1["text"] == "O" and b4["text"] == "O" and b7["text"]  == "O":
+		b1.config(bg="Red")
+		b4.config(bg="Red")
+		b7.config(bg="Red")
+		winner = True
+		winPos = 2
+		player_score[1] += 1
+		player2_score['text'] = f'{player_score[1]}'
+		disable_all_buttons()
+	elif b2["text"] == "O" and b5["text"] == "O" and b8["text"]  == "O":
+		b2.config(bg="Red")
+		b5.config(bg="Red")
+		b8.config(bg="Red")
+		winner = True
+		winPos = 2
+		player_score[1] += 1
+		player2_score['text'] = f'{player_score[1]}'
+		disable_all_buttons()
+	elif b3["text"] == "O" and b6["text"] == "O" and b9["text"]  == "O":
+		b3.config(bg="Red")
+		b6.config(bg="Red")
+		b9.config(bg="Red")
+		winner = True
+		winPos = 2
+		player_score[1] += 1
+		player2_score['text'] = f'{player_score[1]}'
+		disable_all_buttons()
+	elif b1["text"] == "O" and b5["text"] == "O" and b9["text"]  == "O":
+		b1.config(bg="Red")
+		b5.config(bg="Red")
+		b9.config(bg="Red")
+		winner = True
+		winPos = 2
+		player_score[1] += 1
+		player2_score['text'] = f'{player_score[1]}'
+		disable_all_buttons()
+	elif b3["text"] == "O" and b5["text"] == "O" and b7["text"]  == "O":
+		b3.config(bg="Red")
+		b5.config(bg="Red")
+		b7.config(bg="Red")
+		winner = True
+		winPos = 2
+		player_score[1] += 1
+		player2_score['text'] = f'{player_score[1]}'
+		disable_all_buttons()
 
- # Check if tie
- if count == 9 and winner == False:
-  messagebox.showinfo("Tic Tac Toe", "It's A Tie!\n No One Wins!")
-  disable_all_buttons()
- if winner == True:
-  winnerPic(winPos)
+# Check if tie
+	if count == 9 and winner == False:
+		messagebox.showinfo("Tic Tac Toe", "It's A Tie!\n No One Wins!")
+		disable_all_buttons()
+	if winner == True:
+		winnerPic(winPos)
 
 # Button clicked function
 def b_click(b):
